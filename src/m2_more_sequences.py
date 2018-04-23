@@ -102,14 +102,15 @@ def shortest_string(strings):
     Type hints:
       :type strings: list[str]   or tuple(str)
     """
-    # y = []
-    # for k in range(len(strings)):
-    #     x = strings[k]
-    #     y = y + [len(x)]
-    #     if y[k] == min(y[k]):
-    #         return y[k]
+    index_of_smallest = 0
+    for k in range(len(strings)):
+        if len(strings[k]) < len(strings[index_of_smallest]):
+            index_of_smallest = k
+    return strings[index_of_smallest]
+
+
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
 
@@ -185,6 +186,11 @@ def index_of_largest_number(numbers, n):
       :type n:       int
 
     """
+    # index_of_largest = 0
+    # for k in range(numbers):
+    #     if len(numbers[k]) > len(numbers[index_of_largest]):
+    #         index_of_largest = k
+    # return numbers[index_of_largest]
     # ------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #     The testing code is already written for you (above).
